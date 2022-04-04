@@ -1,0 +1,20 @@
+<div>
+  <label>Nhập nội dung của bạn: </label>
+  <input type="text" [(ngModel)]="name"/>
+</div>
+<div check="margin-top: 20px">
+  <label>Hãy chọn màu của bạn:</label>
+  <button type="submit" name="color" value="red" style="color: red" (click)="click($event)">Màu đỏ</button>
+  <button type="submit" name="color" value="blue" style="color: blue" (click)="click($event)">Màu xanh da trời</button>
+  <button type="submit" name="color" value="purple" style="color: purple" (click)="click($event)">Màu tím</button>
+  <button type="submit" name="color" value="pink" style="color: pink" (click)="click($event)">Màu hồng</button>
+  <button type="submit" name="color" value="green" style="color: green" (click)="click($event)">Màu xanh lá cây</button>
+  <button type="submit" name="color" value="black" style="color: black" (click)="click($event)">Màu đen</button>
+  <button type="submit" name="color" value="orange" style="color: orange" (click)="click($event)">Màu cam</button>
+
+</div>
+
+<div check="margin-top: 20px">
+  Kết quả:<p class="output" [style.color]="check">{{name}}</p>
+  <p>{{check}}</p>
+</div>

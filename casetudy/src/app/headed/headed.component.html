@@ -1,41 +1,20 @@
-<!--<div class="wrapper">-->
-<!--  <div class="inner-header header-box">-->
-
-<!--    <a href="" id="logo">-->
-<!--<img-->
-<!--  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_cyEYA4Ydfmf3IS3N34trSggNOr6jcvjwvQ&usqp=CAU"-->
-<!--  style="width: 100px;height: auto">-->
-<!--    </a>-->
-<!--    <nav>-->
-<!--      <ul id="mail">-->
-<!--        <li><a href="">Trang chủ</a></li>-->
-<!--        <li><a href="">Dịch vụ</a></li>-->
-<!--        <li><a href="">Nhân viên</a></li>-->
-<!--        <li><a href="">Liên hệ</a></li>-->
-<!--        <li><a href="">Đánh Gía</a></li>-->
-<!--      </ul>-->
-
-<!--    </nav>-->
-<!--  </div>-->
-<!--</div>-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_cyEYA4Ydfmf3IS3N34trSggNOr6jcvjwvQ&usqp=CAU"
-      style="width: 100px;height: auto">
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXA1LnBbl0CPB7hAYPxyA3kVPcy3fTSief5qwN3PAXGoT9krrnkZQgFm-IbahR7Te4f6Q&usqp=CAU"
+      style="width: 150px;height: auto">
     </a>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+          <a class="nav-link" [routerLink]="['/home']">Trang chủ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Liên hệ</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-             aria-expanded="false">
+          <a class="nav-link dropdown-toggle" routerLink="/service" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
             Dịch vụ
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,13 +25,32 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Đánh Gía</a>
+          <a class="nav-link" href="#">Đánh Gía</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nhân viên</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Khách hàng</a>
+        </li>
+
       </ul>
+
     </div>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+
+    <div class="d-flex">
+
+      <div>
+        <marquee width="100%" direction="right">
+          Chào mừng đến với khu du lịch Furam chúng tôi
+        </marquee>
+        <form class="d-flex ">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+
   </div>
 </nav>

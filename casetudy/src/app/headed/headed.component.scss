@@ -5,8 +5,18 @@
 }
 
 .container-fluid{
-  background-color: #ffffff;
+  background-color: rgba(74, 14, 108, 0.53);
+  font-size: 20px;
+  color: #48ec25;
 }
+ul li .dropdown-item{
+  color: black;
+}
+.nav-item a{
+  color: white;
+}
+
+
 
 //ul {
 //  list-style: none;
