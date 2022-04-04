@@ -7,10 +7,19 @@ import {Shape} from "./shape";
 export class Rectangle extends Shape implements IArea{
 
 
-    constructor(x:number, y:number, private _width:number, private _height:number) {
-        super(x,y);
+    // constructor(x:number, y:number, private _width:number, private _height:number) {
+    //     super(x,y);
+    //
+    //
+    // }
+private _width:number;
+private _height:number;
 
 
+    constructor(x: number, y: number, width: number, height: number) {
+        super(x, y);
+        this._width = width;
+        this._height = height;
     }
 
     area(): number {
@@ -33,4 +42,5 @@ export class Rectangle extends Shape implements IArea{
     set height(value: number) {
         this._height = value;
     }
+
 }

@@ -1,7 +1,10 @@
 "use strict";
-exports.__esModule = true;
-exports.Shape = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Shape = /** @class */ (function () {
+    // constructor(x: number, y: number) {
+    //     this._x = x;
+    //     this._y = y;
+    // }
     function Shape(x, y) {
         this._x = x;
         this._y = y;
@@ -13,7 +16,7 @@ var Shape = /** @class */ (function () {
         set: function (value) {
             this._x = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Shape.prototype, "y", {
@@ -23,11 +26,11 @@ var Shape = /** @class */ (function () {
         set: function (value) {
             this._y = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Shape.prototype.toString = function () {
-        return "(x:".concat(this._x, ", y:").concat(this._y, ")");
+        return "(x:" + this._x + ", y:" + this._y + ")";
     };
     return Shape;
 }());

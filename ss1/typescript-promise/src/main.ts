@@ -7,7 +7,7 @@ const buyACar = (car: any) => {
             } else {
                 reject("do not enough money");
             }
-        }, 100);
+        }, 10000);
     }))
 }
 money = 1000000001;

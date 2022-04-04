@@ -3,11 +3,16 @@ export class Shape {
     private _y: number;
 
 
+    // constructor(x: number, y: number) {
+    //     this._x = x;
+    //     this._y = y;
+    // }
+
+
     constructor(x: number, y: number) {
         this._x = x;
         this._y = y;
     }
-
 
     get x(): number {
         return this._x;
@@ -29,4 +34,5 @@ export class Shape {
         return `(x:${this._x}, y:${this._y})`;
 
     }
+
 }

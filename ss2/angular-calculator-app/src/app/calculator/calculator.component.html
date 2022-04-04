@@ -1,0 +1,35 @@
+<p>calculator works!</p>
+
+<form name="calculator">
+  <table>
+    <tr>
+      <td colspan="4">
+        <input type="text" name="display" disabled [value]="tex">
+      </td>
+    </tr>
+    <tr>
+      <td><input type="button" name="one" value="1" (click)="showValue($event)"></td>
+      <td><input type="button" name="two" value="2" (click)="showValue($event)"></td>
+      <td><input type="button" name="three" value="3" (click)="showValue($event)"></td>
+      <td><input type="button" class="operator" name="plus" value="+" (click)="showValue($event)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="four" value="4" (click)="showValue($event)"></td>
+      <td><input type="button" name="five" value="5" (click)="showValue($event)"></td>
+      <td><input type="button" name="six" value="6" (click)="showValue($event)"></td>
+      <td><input type="button" class="operator" name="minus" value="-" (click)="showValue($event)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="seven" value="7" (click)="showValue($event)"></td>
+      <td><input type="button" name="eight" value="8" (click)="showValue($event)"></td>
+      <td><input type="button" name="nine" value="9" (click)="showValue($event)"></td>
+      <td><input type="button" class="operator" name="times" value="*" (click)="showValue($event)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="operator" id="clear" name="clear" value="C" (click)="delete()"></td>
+      <td><input type="button" class="operator" name="zero" value="0" (click)="showValue($event)"></td>
+      <td><input type="button" class="operator" name="doit" value="=" (click)="showTarget()"></td>
+      <td><input type="button" class="operator" name="div" value="/" (click)="showValue($event)"></td>
+    </tr>
+  </table>
+</form>
