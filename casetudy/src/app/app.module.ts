@@ -7,6 +7,7 @@ import { HeadedComponent } from './headed/headed.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { ListComponent } from './service/list/list.component';
+import { CreatServiceComponent } from './service/creat-service/creat-service.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ListComponent } from './service/list/list.component';
     HeadedComponent,
     FooterComponent,
     BodyComponent,
-    ListComponent
+    ListComponent,
+    CreatServiceComponent
 
   ],
   imports: [

@@ -21,4 +21,8 @@ export class ColorComponent implements OnInit {
     console.log(value.target.style.color);
     this.check = value.target.style.color;
   }
+
+  tex() {
+    console.log(this.check);
+  }
 }

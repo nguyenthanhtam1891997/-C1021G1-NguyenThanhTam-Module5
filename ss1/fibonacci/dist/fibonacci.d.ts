@@ -1,1 +1,1 @@
-declare function fibonacci(value: number): void;
+declare function fibonacci(value: number): number;

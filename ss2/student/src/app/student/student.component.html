@@ -1,0 +1,10 @@
+<p>student works!</p>
+
+<h3>Student information</h3>
+<p>name: {{student1.name}}</p>
+<p>age: {{student1.age}}</p>
+<p>address: {{student1.address}}</p>
+<p>scores: {{student1.scores}}</p>
+
+<p>thay đổi điểm số: <input type="number"#element (click)="getValue(element.value)" value="{{student1.scores}}"></p>
+<p>thay đổi địa điểm: <input type="text" [(ngModel)]="student1.address"></p>
