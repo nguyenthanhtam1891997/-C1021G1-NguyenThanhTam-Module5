@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+
+    <table class="table table-striped table-hover ">
+      <thead class="thead-inverse">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+        <th>SCORES</th>
+        <th>RESULT</th>
+        <th>ACTION</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of studentList">
+
+        <td>{{item.id}}</td>
+        <td [style.color]="valueColor">{{item.name|titlecase}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.scores}}</td>
+        <td *ngIf="item.scores<=6" class="text-danger">FAIL</td>
+        <td *ngIf="item.scores >6" class="text-success">PASS</td>
+
+        <td>
+          <a class="btn btn-success m-2">Detail</a>
+          <a class="btn btn-danger m-2">Delete</a>
+          <a class="btn btn-info m-2">View</a>
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<input #element type="text" (change)="changeColor(element.value)">

@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    },
+    {
+      "id": 2,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    },
+    {
+      "id": 3,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    },
+    {
+      "id": 4,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    },
+    {
+      "id": 5,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    },
+    {
+      "id": 6,
+      "name": "tam",
+      "dayOfBirth": "18/10/1997",
+      "gender": "nam",
+      "card": "123456789",
+      "phone": "1235123123",
+      "address": "da nang"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

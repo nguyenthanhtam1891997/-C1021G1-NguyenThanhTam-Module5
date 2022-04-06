@@ -8,6 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { ListComponent } from './service/list/list.component';
 import { CreatServiceComponent } from './service/creat-service/creat-service.component';
+import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { ListEmployeeComponent } from './employee/list-employee/list-employee.component';
+import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
+import { EditEmployeeComponent } from './employee/edit-employee/edit-employee.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -17,11 +24,18 @@ import { CreatServiceComponent } from './service/creat-service/creat-service.com
     FooterComponent,
     BodyComponent,
     ListComponent,
-    CreatServiceComponent
+    CreatServiceComponent,
+    ListCustomerComponent,
+    CreateCustomerComponent,
+    EditCustomerComponent,
+    ListEmployeeComponent,
+    CreateEmployeeComponent,
+    EditEmployeeComponent
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
