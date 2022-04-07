@@ -1,3 +1,8 @@
+<div>
+  <button type="button" class="btn btn-primary" (click)="addCustomer()">Thêm mới</button>
+</div>
+
+
 <div class="container">
   <h1 class="heading"><strong>List Customer</strong></h1>
   <div class="table-responsive">
@@ -23,13 +28,13 @@
         <td>{{item.phone}}</td>
         <td>{{item.address}}</td>
         <td>
-          <button type="button" class="btn btn-primary" (click)="getInFor(item)">view</button>
+          <button type="button" class="btn btn-primary">view</button>
         </td>
         <td>
-          <a routerLink="/customer-edit/{{item.id}}" type="button" class="btn btn-primary" >edit</a>
+          <button type="button" class="btn btn-primary">edit</button>
         </td>
         <td>
-          <button type="button" class="btn btn-primary" (click)="getInFor(item)" data-bs-toggle="modal"
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                   data-bs-target="#exampleModal">Delete
           </button>
         </td>
@@ -38,7 +43,7 @@
     </table>
   </div>
 
-<p *ngIf="customer">{{customer.id}}</p>
+  <p *ngIf="customer">{{customer.id}}</p>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -51,7 +56,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer)">Save
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save
             changes
           </button>
         </div>

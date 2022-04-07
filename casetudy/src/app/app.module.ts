@@ -15,6 +15,7 @@ import { ListEmployeeComponent } from './employee/list-employee/list-employee.co
 import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
 import { EditEmployeeComponent } from './employee/edit-employee/edit-employee.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

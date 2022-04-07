@@ -6,10 +6,10 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+  "customerList": [
     {
       "id": 1,
-      "name": "tam",
+      "name": "tam dai ca",
       "dayOfBirth": "18/10/1997",
       "gender": "nam",
       "card": "123456789",
@@ -60,9 +60,114 @@
       "card": "123456789",
       "phone": "1235123123",
       "address": "da nang"
+    },
+    {
+      "name": "wqewqewq",
+      "dayOfBirth": "wqeqweqw",
+      "gender": "qweqweq",
+      "card": "qweqweq",
+      "phone": "qweqeq",
+      "address": "qweqweq",
+      "id": 7
+    },
+    {
+      "name": "sauifhriewhtcoercsajgtmrak;fvkwe",
+      "dayOfBirth": "wqrertwhrc",
+      "gender": "wetertytjyfd",
+      "card": "drtfgyhukhuk",
+      "phone": "gyuhk",
+      "address": "gukh",
+      "id": 8
+    },
+    {
+      "name": "1",
+      "dayOfBirth": "2",
+      "gender": "3",
+      "card": "4",
+      "phone": "5",
+      "address": "6",
+      "id": 9
+    },
+    {
+      "name": "qwewqewq",
+      "dayOfBirth": "qweqweqwe",
+      "gender": "qweqweqwe",
+      "card": "qweqwewq",
+      "phone": "qweqweqw",
+      "address": "qweqweqw",
+      "id": 10
+    },
+    {
+      "name": "r3r3ewer",
+      "dayOfBirth": "werwerew",
+      "gender": "werwerwe",
+      "card": "werwe",
+      "phone": "werwe",
+      "address": "werwe",
+      "id": 11
+    },
+    {
+      "name": "rrrrrr",
+      "dayOfBirth": "rrrrr",
+      "gender": "rrrr",
+      "card": "rrr",
+      "phone": "rrr",
+      "address": "rrrr",
+      "id": 12
+    },
+    {
+      "name": "lllll",
+      "dayOfBirth": "4444",
+      "gender": "5",
+      "card": "6",
+      "phone": "6",
+      "address": "",
+      "id": 13
+    },
+    {
+      "name": "1",
+      "dayOfBirth": "2",
+      "gender": "3",
+      "card": "3",
+      "phone": "3",
+      "address": "3",
+      "id": 14
+    },
+    {
+      "name": "2",
+      "dayOfBirth": "2",
+      "gender": "2",
+      "card": "2",
+      "phone": "2",
+      "address": "2",
+      "id": 15
+    },
+    {
+      "name": "4",
+      "dayOfBirth": "4",
+      "gender": "4",
+      "card": "4",
+      "phone": "4",
+      "address": "4",
+      "id": 16
+    },
+    {
+      "name": "9",
+      "dayOfBirth": "9",
+      "gender": "9",
+      "card": "9",
+      "phone": "9",
+      "address": "9",
+      "id": 17
+    },
+    {
+      "name": "0",
+      "dayOfBirth": "0",
+      "gender": "0",
+      "card": "0",
+      "phone": "0",
+      "address": "0",
+      "id": 18
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

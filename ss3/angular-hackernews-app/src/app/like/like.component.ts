@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LikeComponent implements OnInit {
   like = 0;
+  diskLike = 0;
 
   constructor() {
   }
@@ -16,5 +17,9 @@ export class LikeComponent implements OnInit {
 
   likeThis() {
     this.like++;
+  }
+
+  notLike() {
+    this.diskLike++;
   }
 }

@@ -58,7 +58,5 @@ export class ListComponent implements OnInit {
   deleteValue() {
     this.array.splice(this.tex.id-1,1);
    // this.array.slice(this.tex.id-1,1);
-
-
   }
 }
