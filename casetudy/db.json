@@ -9,165 +9,226 @@
   "customerList": [
     {
       "id": 1,
-      "name": "tam dai ca",
+      "name": "tam dlashdljsadlkasjdlaskj",
+      "code": "KH-0001",
       "dayOfBirth": "18/10/1997",
       "gender": "nam",
       "card": "123456789",
       "phone": "1235123123",
-      "address": "da nang"
-    },
-    {
-      "id": 2,
-      "name": "tam",
-      "dayOfBirth": "18/10/1997",
-      "gender": "nam",
-      "card": "123456789",
-      "phone": "1235123123",
-      "address": "da nang"
-    },
-    {
-      "id": 3,
-      "name": "tam",
-      "dayOfBirth": "18/10/1997",
-      "gender": "nam",
-      "card": "123456789",
-      "phone": "1235123123",
-      "address": "da nang"
+      "address": "da nang",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
+      }
     },
     {
       "id": 4,
       "name": "tam",
+      "code": "KH-0001",
       "dayOfBirth": "18/10/1997",
       "gender": "nam",
       "card": "123456789",
       "phone": "1235123123",
-      "address": "da nang"
+      "address": "da nang",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
+      }
     },
     {
       "id": 5,
       "name": "tam",
+      "code": "KH-0001",
       "dayOfBirth": "18/10/1997",
       "gender": "nam",
       "card": "123456789",
       "phone": "1235123123",
-      "address": "da nang"
+      "address": "da nang",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
+      }
     },
     {
       "id": 6,
-      "name": "tam",
-      "dayOfBirth": "18/10/1997",
+      "name": "wqewqewqeq",
+      "code": "KH-0001",
+      "dayOfBirth": "wqewqewqeq",
+      "gender": "qwewqeqweq",
+      "card": "qwewqeqwe",
+      "phone": "qwewqeqwe",
+      "address": "qweqweqweqw",
+      "customerType": {
+        "id": 5,
+        "nameType": "Member"
+      }
+    },
+    {
+      "id": 7,
+      "name": "ưewqewq",
+      "code": "KH-0001",
+      "dayOfBirth": "ưeqweqweq",
+      "gender": "ưeqweqeq",
+      "card": "qưeqweqweq",
+      "phone": "qưeqeqeqeqw",
+      "address": "qeqeqeqweq",
+      "customerType": {
+        "id": 3,
+        "nameType": "Gold"
+      }
+    },
+    {
+      "id": 8,
+      "name": "ưeqwe",
+      "code": "KH-0001",
+      "dayOfBirth": "ưqeqweq",
+      "gender": "qưeqeq",
+      "card": "qeqeqw",
+      "phone": "qưeqweqw",
+      "address": "qưeqweq",
+      "customerType": {
+        "id": 2,
+        "nameType": "Platinum"
+      }
+    },
+    {
+      "id": 9,
+      "name": "wqewqewqewq",
+      "code": "KH-0001",
+      "dayOfBirth": "wqewqewqe",
+      "gender": "wqewqewq",
+      "card": "wqewqewqe",
+      "phone": "qwewqewq",
+      "address": "wqewqewq",
+      "customerType": {
+        "id": 2,
+        "nameType": "Platinum"
+      }
+    },
+    {
+      "id": 10,
+      "name": "wqewqewq",
+      "code": "KH-0001",
+      "dayOfBirth": "wqewqeq",
+      "gender": "qwewqewq",
+      "card": "qwewqewq",
+      "phone": "wqewqewq",
+      "address": "qwewqewq",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
+      }
+    },
+    {
+      "id": 11,
+      "name": "wqewqeq",
+      "code": "KH-0001",
+      "dayOfBirth": "wqeqwewqe",
+      "gender": "qwewqewqe",
+      "card": "qeqwewqe",
+      "phone": "qwewqeqw",
+      "address": "qweqweqw",
+      "customerType": {
+        "id": 5,
+        "nameType": "Member"
+      }
+    },
+    {
+      "id": 12,
+      "name": "wqeqweqwe",
+      "code": "KH-0001",
+      "dayOfBirth": "qeqweqweq",
+      "gender": "qweqweqwe",
+      "card": "wqeqweqwe",
+      "phone": "qweqweqw",
+      "address": "wqeqweqw",
+      "customerType": "Silver"
+    },
+    {
+      "id": 13,
+      "name": "",
+      "code": "KH-0001",
+      "dayOfBirth": "ưerwqrwqrwq",
+      "gender": "qửqwrqwr",
+      "card": "qwqrwqr",
+      "phone": "qửqwrq",
+      "address": "",
+      "customerType": "[object Object]"
+    },
+    {
+      "id": 14,
+      "name": "wewqewqe",
+      "code": "KH-0001",
+      "dayOfBirth": "wqeqweqw",
+      "gender": "wqewqewq",
+      "card": "qweqweqw",
+      "phone": "wqewqeqw",
+      "address": "wqewqeq",
+      "customerType": "Silver"
+    },
+    {
+      "id": 15,
+      "name": "weqweqw",
+      "code": "KH-0001",
+      "dayOfBirth": "qwewqeqweq",
+      "gender": "qweqwewq",
+      "card": "qweqeqw",
+      "phone": "qweqweqw",
+      "address": "qweqweq",
+      "customerType": {
+        "id": 3,
+        "nameType": "Gold"
+      }
+    },
+    {
+      "id": 17,
+      "name": "thanh tam",
+      "code": "KH-0002",
+      "dayOfBirth": "1997-10-18",
       "gender": "nam",
       "card": "123456789",
-      "phone": "1235123123",
-      "address": "da nang"
+      "phone": "0796298932",
+      "address": "Đà nẵng",
+      "customerType": {
+        "id": 2,
+        "nameType": "Platinum"
+      }
     },
     {
-      "name": "wqewqewq",
-      "dayOfBirth": "wqeqweqw",
-      "gender": "qweqweq",
-      "card": "qweqweq",
-      "phone": "qweqeq",
-      "address": "qweqweq",
-      "id": 7
+      "id": 18,
+      "name": "kim jong un",
+      "code": "KH-0007",
+      "dayOfBirth": "1997-12-18",
+      "gender": "nữ",
+      "card": "123456789",
+      "phone": "0796269823",
+      "address": "đà nẵng ",
+      "customerType": {
+        "id": 4,
+        "nameType": "Silver"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "nameType": "Diamond"
     },
     {
-      "name": "sauifhriewhtcoercsajgtmrak;fvkwe",
-      "dayOfBirth": "wqrertwhrc",
-      "gender": "wetertytjyfd",
-      "card": "drtfgyhukhuk",
-      "phone": "gyuhk",
-      "address": "gukh",
-      "id": 8
+      "id": 2,
+      "nameType": "Platinum"
     },
     {
-      "name": "1",
-      "dayOfBirth": "2",
-      "gender": "3",
-      "card": "4",
-      "phone": "5",
-      "address": "6",
-      "id": 9
+      "id": 3,
+      "nameType": "Gold"
     },
     {
-      "name": "qwewqewq",
-      "dayOfBirth": "qweqweqwe",
-      "gender": "qweqweqwe",
-      "card": "qweqwewq",
-      "phone": "qweqweqw",
-      "address": "qweqweqw",
-      "id": 10
+      "id": 4,
+      "nameType": "Silver"
     },
     {
-      "name": "r3r3ewer",
-      "dayOfBirth": "werwerew",
-      "gender": "werwerwe",
-      "card": "werwe",
-      "phone": "werwe",
-      "address": "werwe",
-      "id": 11
-    },
-    {
-      "name": "rrrrrr",
-      "dayOfBirth": "rrrrr",
-      "gender": "rrrr",
-      "card": "rrr",
-      "phone": "rrr",
-      "address": "rrrr",
-      "id": 12
-    },
-    {
-      "name": "lllll",
-      "dayOfBirth": "4444",
-      "gender": "5",
-      "card": "6",
-      "phone": "6",
-      "address": "",
-      "id": 13
-    },
-    {
-      "name": "1",
-      "dayOfBirth": "2",
-      "gender": "3",
-      "card": "3",
-      "phone": "3",
-      "address": "3",
-      "id": 14
-    },
-    {
-      "name": "2",
-      "dayOfBirth": "2",
-      "gender": "2",
-      "card": "2",
-      "phone": "2",
-      "address": "2",
-      "id": 15
-    },
-    {
-      "name": "4",
-      "dayOfBirth": "4",
-      "gender": "4",
-      "card": "4",
-      "phone": "4",
-      "address": "4",
-      "id": 16
-    },
-    {
-      "name": "9",
-      "dayOfBirth": "9",
-      "gender": "9",
-      "card": "9",
-      "phone": "9",
-      "address": "9",
-      "id": 17
-    },
-    {
-      "name": "0",
-      "dayOfBirth": "0",
-      "gender": "0",
-      "card": "0",
-      "phone": "0",
-      "address": "0",
-      "id": 18
+      "id": 5,
+      "nameType": "Member"
     }
   ]
 }

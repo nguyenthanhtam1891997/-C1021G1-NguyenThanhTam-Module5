@@ -1,24 +1,27 @@
-// import {CustomerType} from "./CustomerType";
+import {CustomerType} from "./CustomerType";
 
 export class Customer {
-  private _id:number;
-  private _name:string;
-  private _dayOfBirth:string;
-  private _gender:string;
-  private _card:string;
-  private _phone:string;
-  private _address:string;
-  // customerType:CustomerType;
+  private _id: number;
+  private _code:string;
+  private _name: string;
+  private _dayOfBirth: string;
+  private _gender: string;
+  private _card: string;
+  private _phone: string;
+  private _address: string;
+  private _customerType: CustomerType;
 
-  constructor(id: number, name: string, dayOfBirth: string, gender: string, card: string, phone: string, address: string) {
+
+  constructor(id: number, code: string, name: string, dayOfBirth: string, gender: string, card: string, phone: string, address: string, customerType: CustomerType) {
     this._id = id;
+    this._code = code;
     this._name = name;
     this._dayOfBirth = dayOfBirth;
     this._gender = gender;
     this._card = card;
     this._phone = phone;
     this._address = address;
-    // this.customerType = customerType;
+    this._customerType = customerType;
   }
 
   get id(): number {
@@ -75,5 +78,21 @@ export class Customer {
 
   set address(value: string) {
     this._address = value;
+  }
+
+  get customerType(): CustomerType {
+    return this._customerType;
+  }
+
+  set customerType(value: CustomerType) {
+    this._customerType = value;
+  }
+
+  get code(): string {
+    return this._code;
+  }
+
+  set code(value: string) {
+    this._code = value;
   }
 }

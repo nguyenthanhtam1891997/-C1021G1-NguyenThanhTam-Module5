@@ -16,6 +16,7 @@ import { CreateEmployeeComponent } from './employee/create-employee/create-emplo
 import { EditEmployeeComponent } from './employee/edit-employee/edit-employee.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormCustomerComponent } from './customer/form-customer/form-customer.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     EditCustomerComponent,
     ListEmployeeComponent,
     CreateEmployeeComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    FormCustomerComponent
 
   ],
   imports: [

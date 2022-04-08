@@ -15,7 +15,7 @@ import {Subscription} from "rxjs";
 export class ListCustomerComponent implements OnInit {
   customerList: Customer[];
   customer: Customer;
-  private subscription: Subscription;
+
 
   constructor(private customerService: ApiCustomer,
               private router: Router) {
@@ -23,15 +23,18 @@ export class ListCustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadData();
+
+  }
+
+  private loadData() {
     this.customerService.getListCustomer().subscribe(data => {
       console.log(data)
       this.customerList = data;
     }, error => {
       console.log("ddang gawp loi")
     })
-
   }
-
 
   // getInFor(item: Customer) {
   //   this.customer = this.customerService.getInFor(item);
@@ -47,6 +50,27 @@ export class ListCustomerComponent implements OnInit {
   //   this.router.navigate(['customer-edit', id])
   // }
   addCustomer() {
-    this.router.navigate(['customer-add'])
+    this.router.navigate(['customer-form',-1])
+  }
+
+
+  getInFor(id: number) {
+    this.customerService.getInFor(id).subscribe(data => {
+      this.customer = data;
+    }, error => {
+      console.log("dang gawp loi")
+    })
+  }
+
+  deleteCustomer(id: number) {
+    this.customerService.deleteCustomer(id).subscribe(() => {
+      console.log("da xoa thanh cong");
+      this.loadData();
+    })
+  }
+
+  editCustomer(idCustomer:number) {
+    this.router.navigate(['customer-form',idCustomer])
+    // this.router.navigateByUrl(`customer-edit/`+idCustomer)
   }
 }

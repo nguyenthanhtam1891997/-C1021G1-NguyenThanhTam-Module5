@@ -1,21 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {CustomerService} from "../service-customer/CustomerService";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Customer} from "../model/Customer";
 import {FormControl, FormGroup} from "@angular/forms";
+import {ApiCustomer} from "../api-customer/apiCustomer";
+import {CustomerType} from "../model/CustomerType";
 
 
 @Component({
   selector: 'app-edit-customer',
   templateUrl: './edit-customer.component.html',
-  providers: [CustomerService],
+  providers: [ApiCustomer],
   styleUrls: ['./edit-customer.component.scss']
 })
 export class EditCustomerComponent implements OnInit {
-  customerInFor: Customer;
 
+  customerTypeList: CustomerType[];
   customerId: number;
-  profileForm = new FormGroup({
+
+  updateForm = new FormGroup({
     id: new FormControl(''),
     name: new FormControl(''),
     dayOfBirth: new FormControl(''),
@@ -23,40 +25,53 @@ export class EditCustomerComponent implements OnInit {
     card: new FormControl(''),
     phone: new FormControl(''),
     address: new FormControl(''),
+    customerType: new FormControl('')
   })
 
-  constructor(private customerService: CustomerService, private route: ActivatedRoute, private router: Router) {
-    console.log(this.route.snapshot.paramMap.get('id'))
-    this.customerId = Number(this.route.snapshot.paramMap.get('id'))
+  constructor(private customerService: ApiCustomer, private route: ActivatedRoute, private router: Router) {
+
   }
 
   ngOnInit(): void {
-    this.customerInFor = this.customerService.getId(this.customerId)
-    this.loadData()
-    console.log(this.customerInFor)
+    this.customerId = Number(this.route.snapshot.paramMap.get('id'))
+    console.log(this.customerId);
+    this.getInFor();
+    this.getListType()
+
   }
 
-  private loadData() {
-    for (const value in this.profileForm.controls) {
-      if (value) {
-        this.profileForm.controls[value].setValue(this.customerInFor[value])
-      }
-    }
+  private getListType() {
+    this.customerService.getListTypeCustomer().subscribe(data => {
+      this.customerTypeList = data;
+      console.log(this.customerTypeList)
+    })
+  }
+
+  private getInFor() {
+    this.customerService.getInFor(this.customerId).subscribe(data => {
+      this.updateForm.setValue(data)
+      console.log(data)
+    }, error => {
+      console.log("dang co loi")
+    })
   }
 
   public save() {
-
-    const customerEdit = {};
-    for (const value in this.profileForm.controls) {
-      if (value) {
-        console.log(this.profileForm.controls[value].value)
-        customerEdit[value] = this.profileForm.controls[value].value;
-      }
-    }
-    this.customerService.updateCustomer(customerEdit as Customer);
-    this.router.navigate(['customer'])
+    this.customerService.updateCustomer(this.customerId, this.updateForm.value).subscribe(() => {
+      console.log("da thay doi thanh cong");
+      this.router.navigateByUrl("customer")
+    })
   }
 
+  // compareTech(T1: CustomerType, T2: CustomerType): boolean {
+  //   return T1 && T2 ? T1.id === T2.id : T1 === T2
+  // }
 
-
+  // check(item: CustomerType) {
+  //   if (item == this.updateForm.get('customerType').value) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 }

@@ -1,20 +1,31 @@
-<div>
-  <button type="button" class="btn btn-primary" (click)="addCustomer()">Thêm mới</button>
+<div class="container p-2">
+  <div class="row">
+    <div class="col-sm-4">
+      <h1 class=""><strong>List Customer</strong></h1>
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4 pt-2">
+      <button type="button" class="btn btn-primary" (click)="addCustomer()">Thêm mới</button>
+    </div>
+  </div>
 </div>
 
 
-<div class="container">
-  <h1 class="heading"><strong>List Customer</strong></h1>
+<div class="container-fluid">
+
   <div class="table-responsive">
-    <table class="table table-success table-hover">
+    <table class="table table-hover">
       <thead class="table-dark">
       <tr>
 
-        <td>Name</td>
-        <td>Day of birth</td>
-        <td>Gen der</td>
-        <td>phone</td>
-        <td>address</td>
+        <td>Tên</td>
+        <td>Mã khách hàng</td>
+        <td>Ngày sinh</td>
+        <td>giới tính</td>
+        <td>số điện thoại</td>
+        <td>Địa chỉ</td>
+        <td>Loại Khách hàng</td>
         <td></td>
         <td></td>
         <td></td>
@@ -23,19 +34,23 @@
       <tbody>
       <tr *ngFor="let item of customerList">
         <td>{{item.name}}</td>
+        <td>{{item.code}}</td>
         <td>{{item.dayOfBirth}}</td>
         <td>{{item.gender}}</td>
         <td>{{item.phone}}</td>
         <td>{{item.address}}</td>
+        <td>{{item.customerType.nameType}}</td>
         <td>
-          <button type="button" class="btn btn-primary">view</button>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2" (click)="getInFor(item.id)">Xem
+          </button>
         </td>
         <td>
-          <button type="button" class="btn btn-primary">edit</button>
+          <button type="button" class="btn btn-secondary" (click)="editCustomer(item.id)">Sửa</button>
         </td>
         <td>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal">Delete
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal" (click)="getInFor(item.id)">Xóa
           </button>
         </td>
       </tr>
@@ -55,10 +70,54 @@
           ... <p>bạn co muon xóa <span *ngIf="customer">{{customer.name}}</span></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save
-            changes
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer.id)">
+            ĐỒNG ý
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table " *ngIf="customer">
+            <tbody>
+            <tr>
+              <td>Tên</td>
+              <td>{{customer.name}}</td>
+            </tr>
+            <tr>
+              <td>Ngày sinh</td>
+              <td>{{customer.dayOfBirth}}</td>
+            </tr>
+            <tr>
+              <td>sỐ điện thoại</td>
+              <td>{{customer.phone}}</td>
+            </tr>
+            <tr>
+              <td>Số Chứng Minh</td>
+              <td>{{customer.card}}</td>
+            </tr>
+            <tr>
+              <td>Gới Tính</td>
+              <td>{{customer.gender}}</td>
+            </tr>
+            <tr>
+              <td>Loại khách hàng</td>
+              <td>{{customer.customerType.nameType}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
         </div>
       </div>
     </div>
