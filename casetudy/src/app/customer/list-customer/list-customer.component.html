@@ -6,7 +6,13 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4 pt-2">
-      <button type="button" class="btn btn-primary" (click)="addCustomer()">Thêm mới</button>
+      <button type="button" class="btn btn-primary" (click)="addCustomer()">
+        <mat-icon>person_add</mat-icon>
+        <!--        <mat-icon>mic</mat-icon>-->
+        Thêm mới
+      </button>
+
+
     </div>
   </div>
 </div>
@@ -42,15 +48,22 @@
         <td>{{item.customerType.nameType}}</td>
         <td>
           <button type="button" class="btn btn-info" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal2" (click)="getInFor(item.id)">Xem
+                  data-bs-target="#exampleModal2" (click)="getInFor(item.id)">
+            <mat-icon>search</mat-icon>
+            Xem
           </button>
         </td>
         <td>
-          <button type="button" class="btn btn-secondary" (click)="editCustomer(item.id)">Sửa</button>
+          <button type="button"  class="btn btn-secondary" (click)="editCustomer(item.id)">
+            <mat-icon>edit</mat-icon>
+            Sửa
+          </button>
         </td>
         <td>
           <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal" (click)="getInFor(item.id)">Xóa
+                  data-bs-target="#exampleModal" (click)="getInFor(item.id)">
+            <mat-icon>backspace</mat-icon>
+            Xóa
           </button>
         </td>
       </tr>
@@ -122,3 +135,4 @@
       </div>
     </div>
   </div>
+

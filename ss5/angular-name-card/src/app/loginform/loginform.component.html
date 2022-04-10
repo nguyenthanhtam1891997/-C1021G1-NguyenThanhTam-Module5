@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form [formGroup]="login" >
+      <div class="form-group">
+        <label >Email</label>
+        <input type="email" class="form-control"  aria-describedby="emailHelpId" formControlName="email" >
+
+      </div>
+      <div *ngIf="login.get('email').invalid && login.get('email').touched " class="text-danger">
+        <span *ngIf="login.get('email').errors.required">không được để trống</span>
+        <span *ngIf="login.get('email').errors.email">phải đúng định dạng email</span>
+      </div>
+
+      <div class="form-group">
+        <label >Password</label>
+        <input type="password" class="form-control"  placeholder="" formControlName="password">
+      </div>
+      <div *ngIf="login.get('password').invalid && login.get('password').touched" class="text-danger">
+        <span *ngIf="login.get('password').errors.required"> không được để trống</span>
+        <span *ngIf="login.get('password').errors.minlength">phải đử 6 kí tự</span>
+
+      </div>
+        <button type="button" class="btn btn-primary" (click)="save()"> save</button>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+</div>

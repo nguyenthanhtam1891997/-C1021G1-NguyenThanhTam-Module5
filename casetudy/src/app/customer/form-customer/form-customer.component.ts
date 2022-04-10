@@ -4,6 +4,8 @@ import {CustomerType} from "../model/CustomerType";
 import {ApiCustomer} from "../api-customer/apiCustomer";
 import {ActivatedRoute, Router} from "@angular/router";
 
+
+
 @Component({
   selector: 'app-form-customer',
   templateUrl: './form-customer.component.html',
@@ -86,4 +88,7 @@ export class FormCustomerComponent implements OnInit {
       })
     }
   }
+
+
 }
+

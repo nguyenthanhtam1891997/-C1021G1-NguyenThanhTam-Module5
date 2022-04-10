@@ -1,120 +1,120 @@
-<form [formGroup]="customerForm" novalidate>
+<h1 style="font-family: 'Arial Rounded MT Bold';text-align: center;color: #046056">
+  Biểu Mẫu Khách Hàng
+</h1>
 
-  <div class="form-group">
-    <label>Tên</label>
-    <input type="text"
-           class="form-control" formControlName="name">
 
-  </div>
-  <div *ngIf="customerForm.get('name').invalid">
-     <span *ngIf="customerForm.get('name').errors.required &&
-  customerForm.controls.name.touched" class="text-danger">
-  Phải nhập tên
-</span>
-    <span *ngIf="customerForm.get('name').errors.minlength &&
-  customerForm.controls.name.touched" class="text-danger">
-  tên phải nhìu hơn 3 kí tự
-</span>
-  </div>
-  <div class="form-group">
-    <label>Mã khách hàng</label>
-    <input type="text" class="form-control" formControlName="code">
-  </div>
-  <div *ngIf="customerForm.get('code').invalid && customerForm.get('code').touched">
-    <span *ngIf="customerForm.get('code').errors.required" class="text-danger">
-      Mã khách hàng không dược để trống
-    </span>
-    <span *ngIf="customerForm.get('code').errors.pattern" class="text-danger">
-      Mã khách hàng phải đúng định dạng (KH-xxxx)
-    </span>
-  </div>
+<form [formGroup]="customerForm" novalidate
+      style="border-style: solid ;border-radius: 10px;font-family: 'Bookman Old Style';background-color: rgba(224,198,198,0.62)" class="container pb-3 mb-4">
 
-  <div class="form-group">
-    <label>Ngày sinh</label>
-    <input type="date"
-           class="form-control" formControlName="dayOfBirth">
-  </div>
-  <div *ngIf="customerForm.get('dayOfBirth').invalid && customerForm.get('dayOfBirth').touched">
-    <span *ngIf="customerForm.get('dayOfBirth').errors.required
-    " class="text-danger">
-      ngày tháng không được để trống
-    </span>
-    <span *ngIf="customerForm.get('dayOfBirth').errors.ageEro" class="text-danger">
-        bạn phải trên 18 tuỏi
-    </span>
-  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-6">
+        <div class="form-group">
+          <label>Tên</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div *ngIf="customerForm.get('name').invalid && customerForm.controls.name.touched" class="text-danger">
+          <span *ngIf="customerForm.get('name').errors.required ">Phải nhập tên</span>
+          <span *ngIf="customerForm.get('name').errors.minlength">tên phải nhìu hơn 3 kí tự</span>
+        </div>
 
-  <div class="form-group">
-    <label>Gới tính</label>
-    <input type="text"
-           class="form-control" formControlName="gender">
-  </div>
-  <div *ngIf="customerForm.get('gender').invalid">
-    <span *ngIf="customerForm.get('gender').errors.required && customerForm.get('gender').touched" class="text-danger">
-      gới tính không được để trống
-    </span>
+        <div class="form-group">
+          <label>Mã khách hàng</label>
+          <input type="text" class="form-control" formControlName="code">
+        </div>
+        <div *ngIf="customerForm.get('code').invalid && customerForm.get('code').touched" class="text-danger">
+          <span *ngIf="customerForm.get('code').errors.required">Mã khách hàng không dược để trống</span>
+          <span *ngIf="customerForm.get('code').errors.pattern">Mã khách hàng phải đúng định dạng (KH-xxxx)</span>
+        </div>
 
-  </div>
-  <div class="form-group">
-    <label>Số CMND</label>
-    <input type="text"
-           class="form-control" formControlName="card">
-  </div>
-  <div *ngIf="customerForm.get('card').invalid && customerForm.get('card').touched">
-    <span *ngIf="customerForm.get('card').errors.required " class="text-danger">
-       số chứng minh không được để trống
-    </span>
-    <span *ngIf="customerForm.get('card').errors.pattern " class="text-danger">
-        số chứng minh phải 9 chử số
-      </span>
-  </div>
-  <div class="form-group">
-    <label>Số điện thoại</label>
-    <input type="text"
-           class="form-control" formControlName="phone">
-  </div>
-  <div *ngIf="customerForm.get('phone').invalid && customerForm.get('phone').touched">
-    <span *ngIf="customerForm.get('phone').errors.required " class="text-danger">
-      Số điện thoại không được để trống
-    </span>
-    <span *ngIf="customerForm.get('phone').errors.pattern " class="text-danger">
-      Số điện thoại phải đúng định dạng
-    </span>
-  </div>
-  <div class="form-group">
-    <label>Địa chỉ</label>
-    <input type="text"
-           class="form-control" formControlName="address">
-  </div>
-  <div *ngIf="customerForm.get('address').invalid && customerForm.get('address').touched">
-    <span *ngIf="customerForm.get('address').errors.required " class="text-danger">
-     Địa chỉ không được để trống
-    </span>
-    <span *ngIf="customerForm.get('address').errors.minlength " class="text-danger">
-     Địa chỉ phải lơn hon 5 kí tự
-    </span>
-  </div>
-  <div class="form-group">
-    <div *ngIf="customerTypeList">
-      <select class="form-select" *ngIf="customerId <= 0" formControlName="customerType">
-        <option disabled selected value="">--Loại khách hàng--</option>
-        <option *ngFor="let item of customerTypeList"
-                [ngValue]="item">{{item.nameType}}</option>
-      </select>
-      <select class="form-select" *ngIf="customerId >0" formControlName="customerType" name="customerType">
-        <option *ngFor="let item of customerTypeList"
-                [ngValue]="item"
-                [selected]="customerForm.get('customerType').value.id==item.id">{{item.nameType}}</option>
-      </select>
+        <div class="form-group">
+          <label>Ngày sinh</label>
+          <input type="date" class="form-control" formControlName="dayOfBirth">
+        </div>
+        <div *ngIf="customerForm.get('dayOfBirth').invalid && customerForm.get('dayOfBirth').touched"
+             class="text-danger">
+          <span *ngIf="customerForm.get('dayOfBirth').errors.required">ngày tháng không được để trống</span>
+          <span *ngIf="customerForm.get('dayOfBirth').errors.ageEro">bạn phải trên 18 tuỏi</span>
+        </div>
+
+
+
+        <div class="form-group mt-4">
+          <div *ngIf="customerTypeList">
+            <select class="form-select" *ngIf="customerId <= 0" formControlName="customerType">
+              <option disabled selected value="">--Loại khách hàng--</option>
+              <option *ngFor="let item of customerTypeList" [ngValue]="item">{{item.nameType}}</option>
+            </select>
+            <select class="form-select" *ngIf="customerId >0" formControlName="customerType" name="customerType">
+              <option *ngFor="let item of customerTypeList" [ngValue]="item"
+                      [selected]="customerForm.get('customerType').value.id==item.id">{{item.nameType}}</option>
+            </select>
+          </div>
+        </div>
+        <div *ngIf="customerForm.get('customerType').invalid && customerForm.get('customerType').touched"
+             class="text-danger">
+          <span *ngIf="customerForm.get('customerType').errors.required ">Loại khách hàng không được để trống</span>
+        </div>
+      </div>
+      <div class="col-sm-1 col-1"></div>
+      <div class="col-sm-5 col-5">
+        <div class="form-group">
+          <label>Số CMND</label>
+          <input type="text" class="form-control" formControlName="card">
+        </div>
+        <div *ngIf="customerForm.get('card').invalid && customerForm.get('card').touched" class="text-danger">
+          <span *ngIf="customerForm.get('card').errors.required ">số chứng minh không được để trống</span>
+          <span *ngIf="customerForm.get('card').errors.pattern ">số chứng minh phải 9 chử số</span>
+        </div>
+
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="text" class="form-control" formControlName="phone">
+        </div>
+        <div *ngIf="customerForm.get('phone').invalid && customerForm.get('phone').touched" class="text-danger">
+          <span *ngIf="customerForm.get('phone').errors.required ">Số điện thoại không được để trống</span>
+          <span *ngIf="customerForm.get('phone').errors.pattern ">Số điện thoại phải đúng định dạng</span>
+        </div>
+
+
+        <div class="form-group">
+          <label>Địa chỉ</label>
+          <input type="text" class="form-control" formControlName="address">
+        </div>
+        <div *ngIf="customerForm.get('address').invalid && customerForm.get('address').touched" class="text-danger">
+          <span *ngIf="customerForm.get('address').errors.required ">Địa chỉ không được để trống</span>
+          <span *ngIf="customerForm.get('address').errors.minlength ">Địa chỉ phải lơn hon 5 kí tự</span>
+        </div>
+
+
+        <div class="form-group">
+          <div class="d-flex">
+            <label class="me-md-2">Gới tính</label>
+            <div class="me-md-2">
+              <input type="radio" formControlName="gender" value="NAM">
+              <span>Nam</span>
+            </div>
+            <div class="me-md-2">
+              <input type="radio" formControlName="gender" value="NỮ">
+              <span>Nữ</span>
+            </div>
+            <div>
+              <input type="radio" formControlName="gender" value="LJPT">
+              <span>LJPT</span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="customerForm.get('gender').invalid && customerForm.get('gender').touched" class="text-danger">
+          <span *ngIf="customerForm.get('gender').errors.required ">gới tính không được để trống</span>
+        </div>
+
+
+        <div class="form-group">
+          <button type="button" class="btn btn-success" (click)="save()">lưu</button>
+        </div>
+      </div>
     </div>
   </div>
-  <div *ngIf="customerForm.get('customerType').invalid && customerForm.get('customerType').touched">
-    <span *ngIf="customerForm.get('customerType').errors.required "
-          class="text-danger">
-      Loại khách hàng không được để trống
-    </span>
 
-  </div>
-  <button type="button" class="btn btn-primary" (click)="save()">lưu</button>
 
 </form>

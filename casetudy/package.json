@@ -9,11 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "json:server": "json-server --watch db.json"
-
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.13",
+    "@angular/animations": "^9.1.13",
     "@angular/common": "~9.1.13",
     "@angular/compiler": "~9.1.13",
     "@angular/core": "~9.1.13",
@@ -29,6 +28,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.14",
+    "@angular/material": "^9.2.4",
+    "@angular/cdk": "^9.2.4",
     "@angular/cli": "~9.1.14",
     "@angular/compiler-cli": "~9.1.13",
     "@types/jasmine": "~3.5.0",

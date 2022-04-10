@@ -3,7 +3,8 @@ import {Customer} from "../model/Customer";
 import {CustomerService} from "../service-customer/CustomerService";
 import {Router} from "@angular/router";
 import {ApiCustomer} from "../api-customer/apiCustomer";
-import {Subscription} from "rxjs";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {validateHorizontalPosition} from "@angular/cdk/overlay";
 
 
 @Component({
@@ -18,7 +19,8 @@ export class ListCustomerComponent implements OnInit {
 
 
   constructor(private customerService: ApiCustomer,
-              private router: Router) {
+              private router: Router,
+              private snackBar: MatSnackBar) {
 
   }
 
@@ -36,21 +38,8 @@ export class ListCustomerComponent implements OnInit {
     })
   }
 
-  // getInFor(item: Customer) {
-  //   this.customer = this.customerService.getInFor(item);
-  // }
-  //
-  //
-  // deleteCustomer(customer: Customer) {
-  //   this.customerService.deleteCustomer(customer)
-  // }
-  //
-  //
-  // editCustomer(id: number) {
-  //   this.router.navigate(['customer-edit', id])
-  // }
   addCustomer() {
-    this.router.navigate(['customer-form',-1])
+    this.router.navigate(['customer-form', -1])
   }
 
 
@@ -67,10 +56,12 @@ export class ListCustomerComponent implements OnInit {
       console.log("da xoa thanh cong");
       this.loadData();
     })
+
+
   }
 
-  editCustomer(idCustomer:number) {
-    this.router.navigate(['customer-form',idCustomer])
+  editCustomer(idCustomer: number) {
+    this.router.navigate(['customer-form', idCustomer])
     // this.router.navigateByUrl(`customer-edit/`+idCustomer)
   }
 }

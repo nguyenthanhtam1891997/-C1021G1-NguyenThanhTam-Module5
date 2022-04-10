@@ -1,56 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXA1LnBbl0CPB7hAYPxyA3kVPcy3fTSief5qwN3PAXGoT9krrnkZQgFm-IbahR7Te4f6Q&usqp=CAU"
-      style="width: 150px;height: auto">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/home']">Trang chủ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Liên hệ</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="/service" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-            Dịch vụ
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">House</a></li>
-            <li><a class="dropdown-item" href="#">Room</a></li>
 
-            <li><a class="dropdown-item" href="#">Vila</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Đánh Gía</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nhân viên</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/customer">Khách hàng</a>
-        </li>
 
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXA1LnBbl0CPB7hAYPxyA3kVPcy3fTSief5qwN3PAXGoT9krrnkZQgFm-IbahR7Te4f6Q&usqp=CAU"
+        style="width: 150px;height: auto">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']"><mat-icon>home</mat-icon>
 
-    <div class="d-flex">
+              Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liên hệ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/service" id="navbarDropdown" role="button"
+               data-bs-toggle="dropdown">
+              Dịch vụ
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">House</a></li>
+              <li><a class="dropdown-item" href="#">Room</a></li>
 
-      <div>
-        <marquee width="100%" direction="right">
-          Chào mừng đến với khu du lịch Furam chúng tôi
-        </marquee>
-        <form class="d-flex ">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn btn-success" type="submit">Search</button>
-        </form>
+              <li><a class="dropdown-item" href="#">Vila</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Đánh Gía</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><mat-icon>folder</mat-icon>Nhân viên</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/customer"><mat-icon>account_circle</mat-icon>Khách hàng</a>
+          </li>
+
+        </ul>
+
       </div>
+
+      <div class="d-flex me-2">
+
+        <div>
+          <marquee width="100%" direction="right">
+            Chào mừng đến với khu du lịch Furam chúng tôi
+          </marquee>
+          <form class="d-flex ">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+
+
     </div>
+  </nav>
 
 
-  </div>
-</nav>
+
+
+
+
