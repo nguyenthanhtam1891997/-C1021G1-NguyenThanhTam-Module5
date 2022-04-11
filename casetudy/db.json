@@ -11,7 +11,7 @@
       "id": 4,
       "name": "tam",
       "code": "KH-0001",
-      "dayOfBirth": "18/10/1997",
+      "dayOfBirth": "1997-12-12",
       "gender": "nam",
       "card": "123456789",
       "phone": "1235123123",
@@ -25,7 +25,7 @@
       "id": 5,
       "name": "tam",
       "code": "KH-0001",
-      "dayOfBirth": "18/10/1997",
+      "dayOfBirth": "1997-12-12",
       "gender": "nam",
       "card": "123456789",
       "phone": "1235123123",
@@ -33,6 +33,48 @@
       "customerType": {
         "id": 1,
         "nameType": "Diamond"
+      }
+    },
+    {
+      "id": 6,
+      "name": "thanh tam",
+      "code": "KH-0001",
+      "dayOfBirth": "1997-12-12",
+      "gender": "NAM",
+      "card": "123458689",
+      "phone": "0796298932",
+      "address": "da nang",
+      "customerType": {
+        "id": 2,
+        "nameType": "Platinum"
+      }
+    },
+    {
+      "id": 7,
+      "name": "mot ",
+      "code": "KH-0007",
+      "dayOfBirth": "1997-12-12",
+      "gender": "NAM",
+      "card": "123456789",
+      "phone": "0796298932",
+      "address": "da nang",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
+      }
+    },
+    {
+      "id": 8,
+      "name": "hai",
+      "code": "KH-0003",
+      "dayOfBirth": "1997-12-12",
+      "gender": "NỮ",
+      "card": "123456789",
+      "phone": "0796298932",
+      "address": "hà nội",
+      "customerType": {
+        "id": 3,
+        "nameType": "Gold"
       }
     }
   ],

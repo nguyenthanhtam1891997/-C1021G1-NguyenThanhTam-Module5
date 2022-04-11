@@ -32,6 +32,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
     MatListModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxPaginationModule
 
 
   ],

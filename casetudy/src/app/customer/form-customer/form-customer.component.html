@@ -42,7 +42,7 @@
         <div class="form-group mt-4">
           <div *ngIf="customerTypeList">
             <select class="form-select" *ngIf="customerId <= 0" formControlName="customerType">
-              <option disabled selected value="">--Loại khách hàng--</option>
+              <option  selected value="">--Loại khách hàng--</option>
               <option *ngFor="let item of customerTypeList" [ngValue]="item">{{item.nameType}}</option>
             </select>
             <select class="form-select" *ngIf="customerId >0" formControlName="customerType" name="customerType">

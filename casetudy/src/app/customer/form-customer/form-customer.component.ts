@@ -3,7 +3,7 @@ import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/form
 import {CustomerType} from "../model/CustomerType";
 import {ApiCustomer} from "../api-customer/apiCustomer";
 import {ActivatedRoute, Router} from "@angular/router";
-
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 
 @Component({
@@ -31,7 +31,8 @@ export class FormCustomerComponent implements OnInit {
 
   constructor(private customerService: ApiCustomer,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
@@ -79,13 +80,18 @@ export class FormCustomerComponent implements OnInit {
       if (this.customerId > 0) {
         this.customerService.updateCustomer(this.customerId, this.customerForm.value).subscribe(() => {
           console.log("da thay doi thanh cong");
-          this.router.navigateByUrl("customer")
+
+          // this.snackBar.open("Đã update thành công", 'OK')
+
         })
       }
       this.customerService.addCustomer(this.customerForm.value).subscribe(() => {
         console.log("a");
-        this.router.navigateByUrl("customer");
+
+        // this.snackBar.open("Đã thêm thành công", 'OK')
+
       })
+      this.router.navigateByUrl("customer");
     }
   }
 
