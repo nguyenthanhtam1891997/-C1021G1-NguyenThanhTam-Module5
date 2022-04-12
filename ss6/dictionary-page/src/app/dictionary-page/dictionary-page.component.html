@@ -1,0 +1,14 @@
+<h2>Từ Điển Anh-Việt</h2>
+
+<table border="1">
+  <tr>
+    <th>Từ Vựng</th>
+    <th>Nghĩa</th>
+  </tr>
+  <tr *ngFor="let dictionary of dictionaries">
+    <td>{{dictionary.word}}</td>
+    <td><a   routerLink="/detail/{{dictionary.word}}" style="color: blue">Chi Tiết</a></td>
+  </tr>
+<!--  <input #element type="text" (click)="getAll()"/>-->
+<!--  <button type="submit" routerLink="/dictionary-detail"></button>-->
+</table>
