@@ -1,2 +1,6 @@
-package com.example.api_angular.service;public interface ICustomerTypeService {
+package com.example.api_angular.service;
+
+import com.example.api_angular.model.CustomerType;
+
+public interface ICustomerTypeService extends IGeneralService<CustomerType> {
 }

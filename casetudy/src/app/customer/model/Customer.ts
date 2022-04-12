@@ -9,10 +9,11 @@ export class Customer {
   private _card: string;
   private _phone: string;
   private _address: string;
+  private _email:string;
   private _customerType: CustomerType;
 
 
-  constructor(id: number, code: string, name: string, dayOfBirth: string, gender: string, card: string, phone: string, address: string, customerType: CustomerType) {
+  constructor(id: number, code: string, name: string, dayOfBirth: string, gender: string, card: string, phone: string, address: string, email: string, customerType: CustomerType) {
     this._id = id;
     this._code = code;
     this._name = name;
@@ -21,6 +22,7 @@ export class Customer {
     this._card = card;
     this._phone = phone;
     this._address = address;
+    this._email = email;
     this._customerType = customerType;
   }
 
@@ -94,5 +96,13 @@ export class Customer {
 
   set code(value: string) {
     this._code = value;
+  }
+
+  get email(): string {
+    return this._email;
+  }
+
+  set email(value: string) {
+    this._email = value;
   }
 }

@@ -75,7 +75,14 @@
           <span *ngIf="customerForm.get('phone').errors.required ">Số điện thoại không được để trống</span>
           <span *ngIf="customerForm.get('phone').errors.pattern ">Số điện thoại phải đúng định dạng</span>
         </div>
-
+        <div class="form-group">
+          <label  >Email</label>
+          <input type="email" class="form-control"  formControlName="email">
+        </div>
+        <div *ngIf="customerForm.get('email').invalid && customerForm.get('email').touched" class="text-danger">
+            <span *ngIf="customerForm.get('email').errors.required">e mail không được để trống </span>
+            <span *ngIf="customerForm.get('email').errors.email">e mail phai dung đang </span>
+        </div>
 
         <div class="form-group">
           <label>Địa chỉ</label>

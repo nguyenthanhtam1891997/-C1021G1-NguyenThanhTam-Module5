@@ -21,6 +21,7 @@ export class FormCustomerComponent implements OnInit {
     code: new FormControl('', [Validators.required, Validators.pattern('^(KH-)([0-9]{4})$')]),
     dayOfBirth: new FormControl('', [Validators.required, this.checkAge]),
     gender: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     card: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{9}$')]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$')]),
     address: new FormControl('', [Validators.required, Validators.minLength(5)]),
@@ -81,16 +82,18 @@ export class FormCustomerComponent implements OnInit {
         this.customerService.updateCustomer(this.customerId, this.customerForm.value).subscribe(() => {
           console.log("da thay doi thanh cong");
 
-          // this.snackBar.open("Đã update thành công", 'OK')
+          this.snackBar.open("Đã update thành công", 'OK')
 
         })
+      } else {
+        this.customerService.addCustomer(this.customerForm.value).subscribe(() => {
+          console.log("a");
+
+          this.snackBar.open("Đã thêm thành công", 'OK')
+
+        })
+
       }
-      this.customerService.addCustomer(this.customerForm.value).subscribe(() => {
-        console.log("a");
-
-        // this.snackBar.open("Đã thêm thành công", 'OK')
-
-      })
       this.router.navigateByUrl("customer");
     }
   }

@@ -27,6 +27,7 @@ export class ListCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadData();
+    this.p = 1
 
   }
 
@@ -40,7 +41,7 @@ export class ListCustomerComponent implements OnInit {
   }
 
   addCustomer() {
-    this.router.navigate(['customer-form', -1])
+    this.router.navigateByUrl('/customer-form/-1')
   }
 
 
@@ -55,8 +56,9 @@ export class ListCustomerComponent implements OnInit {
   deleteCustomer(id: number) {
     this.customerService.deleteCustomer(id).subscribe(() => {
       console.log("da xoa thanh cong");
-      // this.snackBar.open('Đã xáo thành công','OK')
+      this.snackBar.open('Đã xáo thành công', 'OK')
       this.loadData();
+      this.p = 1
     })
 
 
@@ -68,6 +70,7 @@ export class ListCustomerComponent implements OnInit {
   }
 
   search(value: string, value2: string) {
+
     this.customerService.getSearch(value, value2).subscribe(data => {
       console.log(data);
       this.customerList = data;
@@ -77,6 +80,7 @@ export class ListCustomerComponent implements OnInit {
   }
 
   goToList() {
-    this.loadData();
+    this.loadData()
+    this.p = 1
   }
 }

@@ -86,11 +86,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title text-danger" id="exampleModalLabel">Xóa khách hàng</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-danger " style="font-family:'Arial Narrow'">
           ... <p>bạn co muon xóa <span *ngIf="customer">{{customer.name}}</span></p>
+          <h6>(Không thể quay lại dữ liệu đã xóa)</h6>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -106,11 +107,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel2">Thông tin chi tiết</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <table class="table " *ngIf="customer">
+        <div class="modal-body" >
+          <table class="table" *ngIf="customer">
             <tbody>
             <tr>
               <td>Tên</td>

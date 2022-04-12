@@ -1,4 +1,4 @@
-package com.example.thithu.service;
+package com.example.api_angular.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -33,6 +33,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import {NgxPaginationModule} from "ngx-pagination";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import {NgxPaginationModule} from "ngx-pagination";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,

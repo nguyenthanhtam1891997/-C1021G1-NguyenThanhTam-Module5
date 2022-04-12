@@ -51,30 +51,44 @@
     },
     {
       "id": 7,
-      "name": "mot ",
-      "code": "KH-0007",
+      "name": "năm",
+      "code": "KH-0112",
       "dayOfBirth": "1997-12-12",
-      "gender": "NAM",
+      "gender": "LJPT",
       "card": "123456789",
-      "phone": "0796298932",
-      "address": "da nang",
+      "phone": "0905946542",
+      "address": "nghệ an",
       "customerType": {
-        "id": 1,
-        "nameType": "Diamond"
+        "id": 5,
+        "nameType": "Member"
       }
     },
     {
       "id": 8,
-      "name": "hai",
-      "code": "KH-0003",
+      "name": "sau",
+      "code": "KH-0007",
       "dayOfBirth": "1997-12-12",
-      "gender": "NỮ",
+      "gender": "NAM",
       "card": "123456789",
-      "phone": "0796298932",
-      "address": "hà nội",
+      "phone": "0905946542",
+      "address": "AMERICA",
       "customerType": {
-        "id": 3,
-        "nameType": "Gold"
+        "id": 4,
+        "nameType": "Silver"
+      }
+    },
+    {
+      "id": 9,
+      "name": "KIM",
+      "code": "KH-7451",
+      "dayOfBirth": "1996-12-12",
+      "gender": "LJPT",
+      "card": "123456789",
+      "phone": "0905946542",
+      "address": "QƯEWQEWQE",
+      "customerType": {
+        "id": 1,
+        "nameType": "Diamond"
       }
     }
   ],
