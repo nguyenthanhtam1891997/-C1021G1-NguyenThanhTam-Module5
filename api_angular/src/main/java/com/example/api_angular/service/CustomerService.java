@@ -43,4 +43,9 @@ public class CustomerService implements ICustomerService {
     public List<Customer> findAllByNameContainingAndAddressContaining(String name, String address) {
         return customerRepository.findAllByNameContainingAndAddressContaining(name,address);
     }
+
+    @Override
+    public List<Customer> searchByNameAndAddress(String name, String address) {
+        return customerRepository.searchByNameAndAddress(name,address);
+    }
 }

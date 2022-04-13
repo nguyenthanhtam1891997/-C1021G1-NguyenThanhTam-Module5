@@ -70,8 +70,7 @@
           </button>
         </td>
         <td>
-          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal" (click)="getInFor(item.id)">
+          <button type="button" class="btn btn-danger"  (click)="getInForDelete(item.id)">
             <mat-icon>backspace</mat-icon>
             Xóa
           </button>
@@ -81,27 +80,27 @@
     </table>
   </div>
 
-  <p *ngIf="customer">{{customer.id}}</p>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-danger" id="exampleModalLabel">Xóa khách hàng</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-danger " style="font-family:'Arial Narrow'">
-          ... <p>bạn co muon xóa <span *ngIf="customer">{{customer.name}}</span></p>
-          <h6>(Không thể quay lại dữ liệu đã xóa)</h6>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer.id)">
-            ĐỒNG ý
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--  <p *ngIf="customer">{{customer.id}}</p>-->
+<!--  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 class="modal-title text-danger" id="exampleModalLabel">Xóa khách hàng</h5>-->
+<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--        </div>-->
+<!--        <div class="modal-body text-danger " style="font-family:'Arial Narrow'">-->
+<!--          ... <p>bạn co muon xóa <span *ngIf="customer">{{customer.name}}</span></p>-->
+<!--          <h6>(Không thể quay lại dữ liệu đã xóa)</h6>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>-->
+<!--          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer.id)">-->
+<!--            ĐỒNG ý-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
     <div class="modal-dialog">
@@ -141,7 +140,7 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Đóng</button>
         </div>
       </div>
     </div>

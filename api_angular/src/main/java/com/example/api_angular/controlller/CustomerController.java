@@ -81,7 +81,7 @@ public class CustomerController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Customer>> searchCustomer(@RequestParam(defaultValue = "") String name, @RequestParam(defaultValue = "") String address) {
-        List<Customer> customerList = customerService.findAllByNameContainingAndAddressContaining(name, address);
+        List<Customer> customerList = customerService.searchByNameAndAddress(name, address);
         if (customerList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {

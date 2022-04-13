@@ -1,0 +1,46 @@
+<table class="table">
+  <thead>
+  <td><p>Thông tin</p></td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Tên</td>
+    <td>{{customer.name}}</td>
+  </tr>
+  <tr>
+    <td>Mã khách hàng</td>
+    <td>{{customer.code}}</td>
+  </tr>
+  <tr>
+    <td>Ngày sinh</td>
+    <td>{{customer.dayOfBirth}}</td>
+  </tr>
+  <tr>
+    <td>sỐ điện thoại</td>
+    <td>{{customer.phone}}</td>
+  </tr>
+  <tr>
+    <td>Số Chứng Minh</td>
+    <td>{{customer.card}}</td>
+  </tr>
+  <tr>
+    <td>Gới Tính</td>
+    <td>{{customer.gender}}</td>
+  </tr>
+  <tr>
+    <td>Loại khách hàng</td>
+    <td>{{customer.customerType.nameType}}</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>{{customer.email}}</td>
+  </tr>
+  <tr>
+    <td><p class="text-danger">Bạn có chắc xóa chứ(không thể lấy lại dữ liệu khi đã xóa)</p></td>
+    <td>
+      <button type="button" mat-dialog-close="" class="btn btn-primary me-1" (click)="goToList()">thoát</button>
+      <button (click)="delete()" class="btn btn-primary" type="button">xác nhận</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

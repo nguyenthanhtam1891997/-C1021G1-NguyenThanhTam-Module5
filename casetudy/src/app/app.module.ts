@@ -34,6 +34,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import {NgxPaginationModule} from "ngx-pagination";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DiaglodCustomerComponent } from './customer/diaglod-customer/diaglod-customer.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListEmployeeComponent,
     CreateEmployeeComponent,
     EditEmployeeComponent,
-    FormCustomerComponent
+    FormCustomerComponent,
+    DiaglodCustomerComponent
 
   ],
   imports: [
@@ -72,7 +75,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatDatepickerModule,
     MatSnackBarModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatDialogModule,
 
 
   ],

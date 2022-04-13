@@ -6,6 +6,7 @@ import {ApiCustomer} from "../api-customer/apiCustomer";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {validateHorizontalPosition} from "@angular/cdk/overlay";
 import {MatDialog} from "@angular/material/dialog";
+import {DiaglodCustomerComponent} from "../diaglod-customer/diaglod-customer.component";
 
 
 @Component({
@@ -21,7 +22,8 @@ export class ListCustomerComponent implements OnInit {
 
   constructor(private customerService: ApiCustomer,
               private router: Router,
-              private snackBar: MatSnackBar) {
+              private snackBar: MatSnackBar,
+              private dialog: MatDialog) {
 
   }
 
@@ -45,24 +47,23 @@ export class ListCustomerComponent implements OnInit {
   }
 
 
-  getInFor(id: number) {
+  getInForDelete(id: number) {
     this.customerService.getInFor(id).subscribe(data => {
-      this.customer = data;
+      // this.customer = data;
+      const x= this.dialog.open(DiaglodCustomerComponent, {
+        width: '700px',
+        data: {datal: data},
+      })
+      x.afterClosed().subscribe( ()=>{
+        console.log("dong dailog")
+        this.ngOnInit();
+      })
     }, error => {
       console.log("dang gawp loi")
     })
   }
 
-  deleteCustomer(id: number) {
-    this.customerService.deleteCustomer(id).subscribe(() => {
-      console.log("da xoa thanh cong");
-      this.snackBar.open('Đã xáo thành công', 'OK')
-      this.loadData();
-      this.p = 1
-    })
 
-
-  }
 
   editCustomer(idCustomer: number) {
     this.router.navigate(['customer-form', idCustomer])
@@ -74,7 +75,11 @@ export class ListCustomerComponent implements OnInit {
     this.customerService.getSearch(value, value2).subscribe(data => {
       console.log(data);
       this.customerList = data;
-      this.p = 1;
+      if (this.customerList.length === 0) {
+        this.snackBar.open('Không tìm thấy tên bạn tìm kiếm', 'OK');
+        this.ngOnInit();
+      }
+      // this.p = 1;
     })
 
   }
@@ -82,5 +87,17 @@ export class ListCustomerComponent implements OnInit {
   goToList() {
     this.loadData()
     this.p = 1
+  }
+
+  getInFor(id: number) {
+    this.customerService.getInFor(id).subscribe(data=>{
+      this.customer=data;
+    },()=>{
+      console.log("dang gap loi")
+    })
+  }
+
+  close() {
+    this.ngOnInit()
   }
 }

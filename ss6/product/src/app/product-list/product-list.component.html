@@ -13,8 +13,8 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
-    <td><button (click)="eidt(product.id)">edit</button></td>
-    <td><a routerLink="/delete/{{product.id}}">delete</a></td>
+    <td><button (click)="edit(product.id)">edit</button></td>
+    <td><button (click)="delete(product.id)">delete</button></td>
 
   </tr>
 </table>
