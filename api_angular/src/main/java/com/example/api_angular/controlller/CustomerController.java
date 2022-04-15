@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
@@ -89,4 +90,34 @@ public class CustomerController {
         }
     }
 
+    @GetMapping("/code")
+    public ResponseEntity<Customer> searchCode(@RequestParam(defaultValue = "", name = "code") String code1) {
+        Customer customer = customerService.searchCode(code1);
+        if (customer == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(customer, HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/card")
+    public ResponseEntity<Customer> searchCard(@RequestParam(defaultValue = "", name = "card") String card) {
+        Customer customer = customerService.searchCard(card);
+        if (customer == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(customer, HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<Customer> searchAll(@RequestParam(defaultValue = "", name = "code") String code,
+                                              @RequestParam(defaultValue = "", name = "card") String card) {
+        Customer customer = customerService.searchAll(code, card);
+        if (customer == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(customer, HttpStatus.OK);
+        }
+    }
 }

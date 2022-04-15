@@ -48,4 +48,26 @@ public class CustomerService implements ICustomerService {
     public List<Customer> searchByNameAndAddress(String name, String address) {
         return customerRepository.searchByNameAndAddress(name,address);
     }
+
+    @Override
+    public Customer searchCode(String code) {
+        return customerRepository.searchCode(code);
+    }
+
+    @Override
+    public Customer findByCode(String code) {
+        return customerRepository.findByCode(code);
+    }
+
+    @Override
+    public Customer searchCard(String card) {
+        return customerRepository.searchCard(card);
+    }
+
+    @Override
+    public Customer searchAll(String code, String card) {
+        return customerRepository.searchAll(code,card);
+    }
+
+
 }

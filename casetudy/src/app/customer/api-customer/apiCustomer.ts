@@ -50,7 +50,19 @@ export class ApiCustomer {
   getSearch(name: string, address: string) {
 
     // return this.http.get<Customer[]>(this.API_URL,{params:httpParams})
-    return this.http.get<Customer[]>(this.API_SPRING +"search?" + "name="+name +"&address=" + address )
+    return this.http.get<Customer[]>(this.API_SPRING + "search?" + "name=" + name + "&address=" + address)
+  }
+
+  searchCode(code: string) {
+    return this.http.get<Customer>(this.API_SPRING + "code?" + "code=" + code)
+  }
+
+  searchCard(card: string) {
+    return this.http.get<Customer>(this.API_SPRING + "card?" + "card=" + card)
+  }
+
+  searchAll(code: string, card: string) {
+    return this.http.get<Customer>(`${this.API_SPRING}all?` + "code=" + code + "&card=" + card)
   }
 
 }

@@ -1,0 +1,8 @@
+::ng-deep .form-success{
+  color: #4911e2 !important; // green
+  background-color: rgba(44, 220, 12, 0.95) !important;
+  border-color: #c3e6cb !important;
+  .mat-simple-snackbar-action {
+    color: rgba(245, 27, 4, 0.79) !important;
+  }
+}

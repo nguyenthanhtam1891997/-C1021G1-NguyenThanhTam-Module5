@@ -29,7 +29,7 @@ export class ListCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadData();
-    this.p = 1
+
 
   }
 
@@ -44,17 +44,18 @@ export class ListCustomerComponent implements OnInit {
 
   addCustomer() {
     this.router.navigateByUrl('/customer-form/-1')
+    // this.router.navigate(['customer-form', -1])
   }
 
 
   getInForDelete(id: number) {
     this.customerService.getInFor(id).subscribe(data => {
       // this.customer = data;
-      const x= this.dialog.open(DiaglodCustomerComponent, {
+      const x = this.dialog.open(DiaglodCustomerComponent, {
         width: '700px',
         data: {datal: data},
       })
-      x.afterClosed().subscribe( ()=>{
+      x.afterClosed().subscribe(() => {
         console.log("dong dailog")
         this.ngOnInit();
       })
@@ -62,7 +63,6 @@ export class ListCustomerComponent implements OnInit {
       console.log("dang gawp loi")
     })
   }
-
 
 
   editCustomer(idCustomer: number) {
@@ -75,11 +75,15 @@ export class ListCustomerComponent implements OnInit {
     this.customerService.getSearch(value, value2).subscribe(data => {
       console.log(data);
       this.customerList = data;
-      if (this.customerList.length === 0) {
-        this.snackBar.open('Không tìm thấy tên bạn tìm kiếm', 'OK');
-        this.ngOnInit();
-      }
-      // this.p = 1;
+      // this.ngOnInit();
+
+      this.p = 1;
+    }, error => {
+      this.snackBar.open('Không tìm thấy tên bạn tìm kiếm', 'OK', {
+        horizontalPosition: "center",
+        duration: 3000,
+        panelClass: ['notif-success'],
+      });
     })
 
   }
@@ -90,9 +94,9 @@ export class ListCustomerComponent implements OnInit {
   }
 
   getInFor(id: number) {
-    this.customerService.getInFor(id).subscribe(data=>{
-      this.customer=data;
-    },()=>{
+    this.customerService.getInFor(id).subscribe(data => {
+      this.customer = data;
+    }, () => {
       console.log("dang gap loi")
     })
   }

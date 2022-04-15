@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {TodoComponent} from './todo/todo.component';
+import {TodoComponent} from './todo/delete/todo.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import {LoginformComponent} from './loginform/loginform.component';
 

@@ -24,7 +24,7 @@ export class ReactiveFormComponent implements OnInit {
       if (control.value.password !== control.value.confirmPassword) {
         control.get('confirmPassword').setErrors({'notSame': true});
       }
-      return null;
+      return null ;
     })
   });
 
